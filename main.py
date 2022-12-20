@@ -92,6 +92,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                return
 
             #now for the clicking
             elif event.type == pygame.MOUSEBUTTONDOWN and clicks < CLICK_CAP:
@@ -116,7 +117,7 @@ def main():
 
 
         # include all the main file things here
-            display(target_pos, clicks, inner_score, mid_score, outer_score, timer)
+        display(target_pos, clicks, inner_score, mid_score, outer_score, timer)
     pygame.QUIT
 
 
